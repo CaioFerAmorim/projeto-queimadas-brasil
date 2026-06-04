@@ -14,7 +14,7 @@ st.set_page_config(
 # ── Carregamento dos dados ──────────────────────────────────────────────────
 @st.cache_data
 def carregar_dados():
-    df = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dados", "simulacao_queimadas_brasil.csv"))
+    df = pd.read_csv("simulacao_queimadas_brasil.csv")
     df["data"] = pd.to_datetime(df["data"])
     return df
 
